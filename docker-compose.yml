@@ -1,23 +1,26 @@
 version: '3.8'
 
+x-spaceport: &spaceport
+  image: hub.66bit.ru/shared/images/devops-practice:latest
+
 services:
   spaceport1:
-    image: hub.66bit.ru/shared/images/devops-practice:latest
+    <<: *spaceport
     environment:
       - ASP_INSTANCE_NAME=spaceport-1
 
   spaceport2:
-    image: hub.66bit.ru/shared/images/devops-practice:latest
+    <<: *spaceport
     environment:
       - ASP_INSTANCE_NAME=spaceport-2
 
   spaceport3:
-    image: hub.66bit.ru/shared/images/devops-practice:latest
+    <<: *spaceport
     environment:
       - ASP_INSTANCE_NAME=spaceport-3
 
   spaceport4:
-    image: hub.66bit.ru/shared/images/devops-practice:latest
+    <<: *spaceport
     environment:
       - ASP_INSTANCE_NAME=spaceport-4
 
